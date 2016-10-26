@@ -59,9 +59,9 @@ angular.module('colorpicker.module', [])
             re: /#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/,
             parse: function (execResult) {
               return [
-                parseInt(execResult[1], 16),
-                parseInt(execResult[2], 16),
-                parseInt(execResult[3], 16)
+                parseInt(execResult[1] + execResult[2], 16),
+                parseInt(execResult[3] + execResult[4], 16),
+                parseInt(execResult[5] + execResult[6], 16)
               ];
             }
           },
